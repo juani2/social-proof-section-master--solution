@@ -115,7 +115,6 @@ body {
     background-color: var(--very-dark-magenta);
     color: var(--light);
     padding: 2rem;
-    border: 1px solid black;
 }
 
 .card:nth-child(1){
