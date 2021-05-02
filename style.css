@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --very-dark-magenta: hsl(300, 43%, 22%);
+    --soft-pink: hsl(333, 80%, 67%);
+    --dark-grayish-magenta: hsl(303, 10%, 53%);
+    --light-grayish-magenta: hsl(300, 24%, 96%);
+    --light: hsl(0, 0%, 100%);
+}
+
+html, body {
+    font-size: 15px;
+    line-height: 1.65;
+    font-family: 'Spartan','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-image: url('/images/bg-pattern-top-desktop.svg'), url('/images/bg-pattern-bottom-desktop.svg');
+    background-repeat: no-repeat,no-repeat;
+    background-size: contain, contain;
+    background-position: top 0 left -30vw, bottom -20vh right 0;
+}
+
+.social-proof-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.social-proof-container {
+    width: min(86.666%, 74rem);
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.marketing-copy, .customer-ratings {
+    flex: 1 1 50%;
+}
+
+.customer-testimonials {
+    flex: 1 1 100%;
+}
+
+.marketing-copy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 2rem;
+
+}
+
+.marketing-copy__heading {
+    font-size: 3rem;
+    line-height: 1.1;
+    max-width: 11ch;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: var(--very-dark-magenta);
+}
+
+.marketing-copy__body {
+    max-width: 40ch;
+    color: var(--dark-grayish-magenta);
+}
+
+.customer-ratings {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.rating {
+    padding: 1rem 0;
+    border-radius: 0.666rem;
+    width: min(100%, 30rem);
+    display: flex;
+    justify-content: center;
+    color: var(--very-dark-magenta);
+    background-color: var(--light-grayish-magenta);
+}
+
+.rating__name {
+    margin-left: 1rem;
+    font-weight: 700;
+}
+
+.customer-ratings .rating:nth-child(1) {
+    align-self: flex-start;
+}
+.customer-ratings .rating:nth-child(2) {
+    align-self: center;
+    margin: 1rem 0;
+}
+.customer-ratings .rating:nth-child(3) {
+    align-self: flex-end;
+}
+
+.customer-testimonials {
+    display: flex;
+    align-items: center;
+    margin-top: 3rem;
+    height: 20.5rem;
+}
+
+.card {
+    border-radius: 0.666rem;
+    background-color: var(--very-dark-magenta);
+    color: var(--light);
+    padding: 2rem;
+    border: 1px solid black;
+}
+
+.card:nth-child(1){
+    align-self: flex-start;
+}
+.card:nth-child(2){
+    align-self: center;
+    margin: 0 1rem;
+}
+.card:nth-child(3){
+    align-self: flex-end;
+}
+
+.customer-profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.customer-picture {
+    max-height: 3.5rem;
+    margin-right: 1rem;
+    border-radius: 5rem;
+}
+
+.customer-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.customer-name {
+    font-style: normal;
+    font-weight: 500;
+}
+
+.customer-status {
+    color: var(--soft-pink);
+}
+
+.customer-message::before{
+    content: open-quote;
+}
+.customer-message::before{
+    content: close-quote;
+}
+
+@media screen and (max-width: 960px) {
+    .social-proof-section {
+        height: fit-content;
+        margin: 5rem 0;
+    }
+
+    .rating {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .rating__name {
+        margin-top: 1rem;
+    }
+
+    .customer-testimonials{
+        flex-direction: column;
+        height: fit-content;
+        margin-bottom: 1rem;
+    }
+
+    .card:nth-child(2) {
+        margin: 1rem 0;
+    }
+
+    .card:nth-child(1){
+        align-self: center;
+    }
+    .card:nth-child(2){
+        align-self: center;
+        margin: 1rem 0;
+    }
+    .card:nth-child(3){
+        align-self: center;
+    }
+}
+
+@media screen and (max-width: 885px){
+    .marketing-copy, .customer-ratings {
+        flex: 1 1 100%;
+    }
+
+    .customer-ratings {
+        margin-top: 2.667rem;
+    }
+
+    .rating {
+        flex-direction: row;
+    }
+    .rating__name {
+        margin-top: 0rem;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        background-image: url('/images/bg-pattern-top-mobile.svg'), url('/images/bg-pattern-bottom-mobile.svg');
+        background-repeat: no-repeat,no-repeat;
+        background-size: contain, contain;
+        background-position: top 0 left 0vw, bottom 0 right 0;
+    }
+    .marketing-copy {
+        text-align: center;
+    }
+    .rating {
+        flex-direction: column;
+    }
+    .rating__name {
+        margin-top: 1rem;
+    }
+}
